@@ -8,7 +8,6 @@ export default class Clientes extends LightningElement {
   @track apellido = '';
   @track telefono = '';
   @track email = '';
-  
   clientes = []
     
 
