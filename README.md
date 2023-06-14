@@ -17,7 +17,7 @@ nuevo cliente”. En caso de error mostrará el error que se ha producido o los 
 Modelo de datos para el objeto "Cliente":
 
 Label (Etiqueta): "Cliente"
-ApiName: "Cliente__c" (o el nombre de API personalizado que desees utilizar)
+ApiName: "Cliente__c"
 Type (Tipo de campo):
 
 ***Campo "Nombre":
@@ -26,10 +26,10 @@ Label: "Nombre"
 ApiName: "Nombre__c"
 Type: Texto
 
-***Campo "Apellidos":
+***Campo "Apellido":
 
-Label: "Apellidos"
-ApiName: "Apellidos__c"
+Label: "Apellido"
+ApiName: "Apellido__c"
 Type: Texto
 
 ***Campo "Email":
