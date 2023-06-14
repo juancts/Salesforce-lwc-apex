@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Nuevo Cliente">
+      <div class="slds-p-around_medium">
+        <lightning-record-edit-form object-api-name="Cliente__c">
+        <lightning-input label="Nombre" value={nombre} onchange={handleNameChange}></lightning-input>
+        <lightning-input label="Apellido" value={apellido} onchange={handleLastNameChange}></lightning-input>
+        <lightning-input label="Telefono" value={telefono} onchange={handlePhoneChange}></lightning-input>
+        <lightning-input label="Email" value={email} onchange={handleEmailChange}></lightning-input>
+        <lightning-button label="guardar" onclick={handleClick}></lightning-button>
+      </lightning-record-edit-form>
+      </div>
+      </lightning-card>
+  </template>
