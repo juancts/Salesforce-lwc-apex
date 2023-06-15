@@ -1,15 +1,17 @@
 import { LightningElement, track } from 'lwc';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import createCliente from '@salesforce/apex/createCli.createCliente';
-
+import getClientes from '@salesforce/apex/createCli.getClientes'
 
 export default class Clientes extends LightningElement {
   @track nombre = '';
   @track apellido = '';
   @track telefono = '';
   @track email = '';
+  
   clientes = []
     
+
 
 handleNameChange(e){
   this.nombre = e.target.value;
@@ -67,6 +69,16 @@ showToast(title, message, variant) {
   variant: variant
 });
 this.dispatchEvent(event);
+}
+
+connectedCallback() {
+  getClientes()
+    .then(result => {
+      this.clientes = result;
+    })
+    .catch(error => {
+      this.showToast('Error', error.body.message, 'error');
+    });
 }
 
 }
