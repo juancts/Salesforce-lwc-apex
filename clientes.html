@@ -10,4 +10,28 @@
       </lightning-record-edit-form>
       </div>
       </lightning-card>
+      <lightning-card title="Registros de Cliente">
+        <div class="slds-p-around_medium">
+          <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+            <thead>
+              <tr class="slds-line-height_reset">
+                <th class="slds-text-title_caps">Nombre</th>
+                <th class="slds-text-title_caps">Apellidos</th>
+                <th class="slds-text-title_caps">Email</th>
+                <th class="slds-text-title_caps">Telefono</th>
+              </tr>
+            </thead>
+            <tbody>
+              <template for:each={clientes} for:item="cliente">
+                <tr key={cliente.Id}>
+                  <td>{cliente.Nombre__c}</td>
+                  <td>{cliente.Apellido__c}</td>
+                  <td>{cliente.Email__c}</td>
+                  <td>{cliente.Telefono__c}</td>
+                </tr>
+              </template>
+            </tbody>
+          </table>
+        </div>
+      </lightning-card>
   </template>
